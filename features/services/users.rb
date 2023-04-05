@@ -1,10 +1,11 @@
 module Rest
     class Users
+        binding.pry 
         include Httparty
 
         headers 'accept' =>  'application/json', 'Content-Type' => 'application/json'
         base_uri CONFIG['base_uri']
- 
+
         def get_users
             self.class.get('/usuarios')        
         end
