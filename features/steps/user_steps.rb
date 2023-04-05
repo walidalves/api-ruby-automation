@@ -1,12 +1,45 @@
-Dado('que tenho uma massa configurada para o endpoint Usuarios.post para o cenário {string}') do |type|
-    @usuarios ||= OpenStruct.new
-    @usuarios.payload = type.eql?('positivo') ? build(:usuario).usuario_payload : { }
-  end
+
+## User Get Steps
+
+Dado ('que tenho uma massa configurada para o endpoint Usuarios.get para o cenário {string}') do |type|
+    @Users ||= OpenStruct.new
+end
+
+Quando ('enviar uma requisição para o endpoint Usuarios.get listar os usuários') do
+      @Users = users.get_users
+end
+
+Entao ('validar o retorno da lista de usuários do endpoint Usuarios.get para o cenário {string}') do |type|
+    expect(@Users.code).to eq status_code
+    expect(@Users.message).to not_to be_empty
+end
+
+Quando ('enviar uma requisição para o endpoint Usuarios.get') do
+
+end
+
+Entao ('validar o retorno do endpoint Usuarios.get para o cenário {string}') do |type|
+end
+
+
+
+## User Post Steps
+
+# Dado('que tenho uma massa configurada para o endpoint Usuarios.post para o cenário {string}') do |type|
+#     @usuarios ||= OpenStruct.new
+#     @usuarios.payload = type.eql?('positivo') ? build(:usuario).usuario_payload : { }
+#   end
   
-  Quando('enviar uma requisição para o endpoint Usuarios.post') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+#   Quando('enviar uma requisição para o endpoint Usuarios.post') do
+#     @usuarios.response = usuarios.post_usuario(@usuarios.payload)
+#   end
   
-  Entao('Validar o retorno do endpoint Usuarios.post para o cenário {string}') do |type|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+#   Entao('Validar o retorno do endpoint Usuarios.post para o cenário {string}') do |type|
+#     if type.eql?('positivo')
+#         expect(@usuarios.response.code).to eql 201
+#         expect(@usuarios.response['message']).to be_an(String)
+#         expect(@usuarios.response['_id']).to be_an(String)
+#       else
+#         expect(@usuarios.response.code).to eql 400
+#       end
+#   end
