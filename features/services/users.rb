@@ -12,5 +12,9 @@ module Rest
         def get_user(id)
             self.class.get("/usuarios/#{id}")
         end
+
+        def post_user(payload)
+            self.class.post('/usuarios', body: payload.to_json)
+        end
     end
 end

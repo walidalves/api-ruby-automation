@@ -8,3 +8,5 @@ require 'rake'
 require_relative 'spec_helper/spec_helper'
 
 CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENV['AMBIENTE']}.yml")
+
+World(REST,FactoryBot::Syntax::Methods)
