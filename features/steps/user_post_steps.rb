@@ -1,30 +1,3 @@
-
-## User Get Steps
-
-Dado ('que tenho uma massa configurada para o endpoint Usuarios.get para o cenário {string}') do |type|
-    @users ||= OpenStruct.new
-end
-
-Quando ('enviar uma requisição para o endpoint Usuarios.get listar os usuários') do
-      @users = users.get_users
-end
-
-Entao ('validar o retorno da lista de usuários do endpoint Usuarios.get para o cenário {string}') do |type|
-    expect(@users.code).to eq status_code
-    expect(@users.message).to not_to be_empty
-end
-
-Quando ('enviar uma requisição para o endpoint Usuarios.get') do
-
-end
-
-Entao ('validar o retorno do endpoint Usuarios.get para o cenário {string}') do |type|
-end
-
-
-
-## User Post Steps
-
 Dado('que tenho uma massa configurada para o endpoint Usuarios.post para o cenário {string}') do |type|
     @usuarios ||= OpenStruct.new
     @usuarios.payload = type.eql?('positivo') ? build(:usuario).usuario_payload : { }

@@ -1,7 +1,6 @@
 module Rest
     class Users
-        binding.pry 
-        include Httparty
+        include HTTParty
 
         headers 'accept' =>  'application/json', 'Content-Type' => 'application/json'
         base_uri CONFIG['base_uri']
