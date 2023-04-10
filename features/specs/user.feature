@@ -13,7 +13,7 @@ Funcionalidade: Usuarios
         Validar o retorno dos usuários cadastrados
         Validar o tipo de cada campo do response
 
-        Dado que tenho uma massa configurada para o endpoint Usuarios.get para o cenário "<tipo>"
+        Dado que tenho uma lista de massa configurada para o endpoint Usuarios.get para o cenário "<tipo>"
         Quando enviar uma requisição para o endpoint Usuarios.get listar os usuários
         Entao validar o retorno da lista de usuários do endpoint Usuarios.get para o cenário "<tipo>"
 

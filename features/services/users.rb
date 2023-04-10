@@ -10,7 +10,7 @@ module Rest
         end
 
         def get_user(id)
-            self.class.get("/usuarios/#{id}")
+            self.class.get("/usuarios/#{:_id}")
         end
 
         def post_user(payload)
