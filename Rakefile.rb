@@ -10,3 +10,8 @@ desc 'Execute Get User Tests'
 task :get_users do
   sh 'bundle exec cucumber -t @get_users'
 end
+
+desc 'Execute Get ID User Tests'
+task :get_user do
+  sh 'bundle exec cucumber -t @get_user'
+end

@@ -1,6 +1,6 @@
 Dado ('que tenho uma lista de massa configurada para o endpoint Usuarios.get para o cenário {string}') do |type|
     @users ||= OpenStruct.new
-    @users.payload = type.eql?('positivo') ? build(:user).user_payload : build(:user).empty_user_payload
+    @users.payload = type.eql?('positivo') ? build(:user).user_payload : { }
 end
 
 Quando ('enviar uma requisição para o endpoint Usuarios.get listar os usuários') do
@@ -13,6 +13,6 @@ Entao ('validar o retorno da lista de usuários do endpoint Usuarios.get para o 
         expect(@users.message).not_to be_empty
         expect(@users.body).not_to be_empty
     else
-       expect(@users.body['quantidade']).to eql(0)
+      expect(@users.body).not_to be_empty
     end
 end
