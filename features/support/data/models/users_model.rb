@@ -19,3 +19,4 @@ class UsersModel
       }
     end
   end
+  

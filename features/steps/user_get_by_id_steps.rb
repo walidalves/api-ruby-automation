@@ -4,7 +4,7 @@ Dado ('que tenho uma massa configurada para o endpoint Usuarios.get para o cená
 end
 
 Quando ('enviar uma requisição para o endpoint Usuarios.get') do
-    @users = users.get_user(_id)
+    @users = users.get_user("0uxuPY0cbmQhpEz1")
 end
 
 Entao ('validar o retorno do endpoint Usuarios.get para o cenário {string}') do |type|
