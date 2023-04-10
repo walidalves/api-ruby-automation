@@ -9,4 +9,13 @@ class UsersModel
         administrador: @administrador
       }
     end
+
+    def empty_user_payload
+      {
+        nome: ,
+        email: ,
+        password: ,
+        administrador:'false'
+      }
+    end
   end
