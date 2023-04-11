@@ -20,7 +20,7 @@ Funcionalidade: Usuarios
         Exemplos:
           |   tipo   |
           | positivo |
-          | negativo |
+          |   vazio  |
     
     @#walid_arnous
     @get_user

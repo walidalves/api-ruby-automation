@@ -1,10 +1,8 @@
 Dado ('que tenho uma massa configurada para o endpoint Usuarios.get para o cenário {string}') do |type|
     @users ||= OpenStruct.new
-    @users.response = users.post_user(@users.payload)
-    @user_id = @users.response['id'] # armazena o ID do usuário criado na variável de instância
     @users.payload = type.eql?('positivo') ? build(:user).user_payload : { }
-
-    
+    @users.response = users.post_user(@users.payload)
+    @user_id = @users.response['_id'] # armazena o ID do usuário criado na variável de instância
 end
 
 Quando ('enviar uma requisição para o endpoint Usuarios.get') do
