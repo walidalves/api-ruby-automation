@@ -19,8 +19,7 @@ Funcionalidade: Usuarios
 
         Exemplos:
           |   tipo   |
-          | positivo |
-          |   vazio  |
+          |   lista  |
     
     @#walid_arnous
     @get_user
