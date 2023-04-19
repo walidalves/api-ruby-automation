@@ -13,6 +13,6 @@ Entao ('validar o retorno da lista de usuários do endpoint Usuarios.get para o 
         expect(@users.message).not_to be_empty
         expect(@users.body).not_to be_empty
     else
-      expect(@users.body).not_to be_empty
+        expect(@users.response.code.to_i).to eql(200)
     end
 end

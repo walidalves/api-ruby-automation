@@ -9,8 +9,8 @@ module Rest
             self.class.get('/usuarios')        
         end
 
-        def get_user(id)
-            self.class.get("/usuarios/#{:_id}")
+        def get_user(_id)
+            self.class.get("/usuarios/#{_id}")
         end
 
         def post_user(payload)
