@@ -43,7 +43,7 @@ jobs:
         if: ${{ failure() }}
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_CHANNEL: test-report
+          SLACK_CHANNEL: ruby-test-report
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://www.vhv.rs/dpng/d/431-4316378_error-icon-hope-for-justice-logo-hd-png.png
           SLACK_MESSAGE: 'Testes durante abertura de PR executados com Falhas! :fire:'
