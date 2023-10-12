@@ -36,7 +36,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         if: ${{ success() }}
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOKK_URL }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_CHANNEL: ruby-test-report
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://www.clipartmax.com/png/middle/179-1795386_patient-success-success-icon-png.png
@@ -48,7 +48,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         if: ${{ failure() }}
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOKK_URL }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_CHANNEL: ruby-test-report
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://www.vhv.rs/dpng/d/431-4316378_error-icon-hope-for-justice-logo-hd-png.png
