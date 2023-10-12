@@ -2,9 +2,9 @@ name: Contract Tests - Scheduled
 
 on:
   schedule:
-    - cron: "0 1 * * 1-5"  # Executar uma vez por dia útil às 1 da manhã
+    - cron: "*/0 1 * * 1-5"  # Executar uma vez por dia útil às 1 da manhã
 
-    
+
 jobs:
   RunTest:
     runs-on: ubuntu-latest
@@ -29,6 +29,7 @@ jobs:
 
       - name: Slack notification - Success
         uses: rtCamp/action-slack-notify@v2
+
         if: ${{ success() }}
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
