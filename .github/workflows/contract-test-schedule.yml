@@ -3,13 +3,8 @@ name: Contract Tests - Scheduled
 on:
   schedule:
     - cron: "0 1 * * 1-5"  # Executar uma vez por dia útil às 1 da manhã
-  
-  push:
-    branches: [ main ]
-  
-  pull_request:
-    branches: [ main ]
 
+    
 jobs:
   RunTest:
     runs-on: ubuntu-latest
