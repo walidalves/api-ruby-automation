@@ -37,7 +37,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_CHANNEL: ruby-test-report
           SLACK_COLOR: ${{ job.status }}
-          SLACK_ICON: https://www.clipartmax.com/png/middle/179-1795386_patient-success-success-icon-png.png
+          SLACK_ICON: https://www.clipartmax.com/png/middle/179-1795386_patient-success-success-icon-png.png 
           SLACK_MESSAGE: 'Testes durante abertura de PR executados com Sucesso! :white_check_mark:'
           SLACK_TITLE: 'Testes durante abertura de PR executados com Sucesso! :white_check_mark:'
           SLACK_USERNAME: SUCESSO

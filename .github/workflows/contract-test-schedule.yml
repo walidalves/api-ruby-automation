@@ -2,7 +2,7 @@ name: Contract Tests - Scheduled
 
 on:
   schedule:
-    - cron: "*/0 1 * * 1-5"  # Executar uma vez por dia útil às 1 da manhã
+    - cron: "*/30 1-5 * * *"    #"0 1 * * 1-5"  # Executar uma vez por dia útil às 1 da manhã
 
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_CHANNEL: ruby-test-report
           SLACK_COLOR: ${{ job.status }}
-          SLACK_ICON: https://www.clipartmax.com/png/middle/179-1795386_patient-success-success-icon-png.png
+          SLACK_ICON: https://www.clipartmax.com/png/middle/160-1601781_a-little-cute-app-to-wake-you-up-near-your-destination-alarm.png
           SLACK_MESSAGE: ':alarm_clock: Testes Agendados executados com Sucesso! :white_check_mark:'
           SLACK_TITLE: ':alarm_clock: Testes Agendados executados com Sucesso! :white_check_mark:'
           SLACK_USERNAME: SUCESSO
@@ -47,7 +47,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_CHANNEL: ruby-test-report
           SLACK_COLOR: ${{ job.status }}
-          SLACK_ICON: https://www.vhv.rs/dpng/d/431-4316378_error-icon-hope-for-justice-logo-hd-png.png
+          SLACK_ICON: https://www.clipartmax.com/png/middle/362-3627812_failed-failed-failed-png.png
           SLACK_MESSAGE: ':alarm_clock: Testes Agendados executados com Falhas! :fire:'
           SLACK_TITLE: ':alarm_clock: Testes Agendados executados com Falhas! :fire:'
           SLACK_USERNAME: FALHA
