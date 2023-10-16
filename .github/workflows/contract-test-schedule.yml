@@ -2,10 +2,10 @@ name: Contract Tests - Scheduled
 
 on:
   schedule:
-    - cron: "30 13 * * *"
+    - cron: "0 15 * * 1"
     #"0 1 * * 1-5"  # Executar uma vez por dia útil às 1 da manhã
 
-
+    
 jobs:
   RunTest:
     runs-on: ubuntu-latest
