@@ -2,7 +2,7 @@ name: Contract Tests - Scheduled
 
 on:
   schedule:
-    - cron: "0 15 * * 1"
+    - cron: "0 * * * 1-5"
     #"0 1 * * 1-5"  # Executar uma vez por dia útil às 1 da manhã
 
     
