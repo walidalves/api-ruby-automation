@@ -26,9 +26,9 @@ jobs:
         
       - name: Instalar o cucumber
         run: gem install bundler cucumber
-        
-      - name: Remove existing report
-        run: rm -f reports/features_report.html
+
+      - name: Remover relatório existente
+        run: rm -f reports/features_report.html  
 
       - name: Executar contract tests
         run: rake contract
