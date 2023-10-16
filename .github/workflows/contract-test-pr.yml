@@ -27,11 +27,11 @@ jobs:
       - name: Instalar o cucumber
         run: gem install bundler cucumber
 
-      - name: Remover relatório existente
-        run: rm -f reports/features_report.html  
-
       - name: Executar contract tests
         run: rake contract
+
+      - name: Remover relatório existente
+        run: rm -f reports/features_report.html  
 
       - name: Slack notification - Success
         uses: rtCamp/action-slack-notify@v2
